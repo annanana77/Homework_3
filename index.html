@@ -14,24 +14,23 @@
         <h1>FizzBuzz!</h1>
         <!--Bonus features: start, end, fizz,buzz values + buttons to generate and reset-->
         <div class="controls">
-            <input type="number" id="start" value="1" min="1" max="100">
             <label for="start">Starting Value:</label>
+            <input type="number" id="start" value="1" min="1" max="100">
             
-            <input type="number" id="end" value="100" min="1" max="100">
             <label for="end">Ending Value:</label>
+            <input type="number" id="end" value="100" min="1" max="100">
             
-            <input type="number" id="fizz" value="3">
             <label for="fizz">Fizz Value:</label>
+            <input type="number" id="fizz" value="3">
 
-            <input type="number" id="buzz" value="5">
             <label for="buzz">Buzz Value:</label>
-
+            <input type="number" id="buzz" value="5">
+            
             <button id="generateBtn">Generate FizzBuzz</button>
             <button id="resetBtn">Clear</button>
         </div>
     </header>
-    <main id="grid">
-
-    </main>
+    <!--main grid where JS will generate divs-->
+    <main id="maingrid"></main>
 </body>
 </html>
