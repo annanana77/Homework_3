@@ -30,20 +30,19 @@ document.getElementById('generateBtn').addEventListener('click', function() { //
     //fizzbuzz logic applied to each div//
     for (let i = startvalue; i <= endvalue; i++) {
         const divnbr = document.getElementById(`myid${i}`); //gets each div by its unique id//
-    if (i % fizzval === 0 && i % buzzval === 0) {
-        divnbr.innerText = "FizzBuzz";
-        divnbr.classList.add("fizzbuzz");
-    } else if (i % fizzval === 0) {
-        divnbr.innerText = "Fizz";
-        divnbr.classList.add("fizz");
-    } else if (i % buzzval === 0) {
-        divnbr.innerText = "Buzz";
-        divnbr.classList.add("buzz");
-    } else{
-        divnbr.innerText = i;
-        divnbr.classList.add("number");
-    }
-
+        if (i % fizzval === 0 && i % buzzval === 0) {
+            divnbr.innerText = "FizzBuzz";
+            divnbr.classList.add("fizzbuzz");
+        } else if (i % fizzval === 0) {
+            divnbr.innerText = "Fizz";
+            divnbr.classList.add("fizz");
+        } else if (i % buzzval === 0) {
+            divnbr.innerText = "Buzz";
+            divnbr.classList.add("buzz");
+        } else{
+            divnbr.innerText = i;
+            divnbr.classList.add("number");
+        }
     }
 });
 
