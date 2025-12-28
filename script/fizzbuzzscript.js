@@ -24,16 +24,16 @@ document.getElementById('generateBtn').addEventListener('click', function() { //
     //fizzbuzz logic applied to each div//
     if (i % fizzval === 0 && i % buzzval === 0) {
         divnbr.innerText = "FizzBuzz";
-        divnbr.classList.add("fizzbuzzclass");
+        divnbr.classList.add("fizzbuzz");
     } else if (i % fizzval === 0) {
         divnbr.innerText = "Fizz";
-        divnbr.classList.add("fizzclass");
+        divnbr.classList.add("fizz");
     } else if (i % buzzval === 0) {
         divnbr.innerText = "Buzz";
-        divnbr.classList.add("buzzclass");
+        divnbr.classList.add("buzz");
     } else{
         divnbr.innerText = i;
-        divnbr.classList.add("numberclass");
+        divnbr.classList.add("number");
     }
 
     }

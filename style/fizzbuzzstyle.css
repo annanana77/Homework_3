@@ -1,4 +1,4 @@
-/*Basic styling for elements in the page*/
+/*basic styling for elements in the page*/
 body {
     font-family: 'Cutive Mono', monospace;
     background-color: #f4f3ef;
@@ -15,14 +15,23 @@ header {
     background-color: #BC8980;
     padding: 20px;
     margin-bottom: 30px;
-    text-align: center;
-    /* is header responsive? */
+}
+header .controls {
+    display: flex; /* using flexbox to arrange label, input and button -> children of .controls */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
-header > div > label {
-    font-size: 20px;
-    font-weight: bold;
+header label, header button, header input {
     color:#4C3E36;
+    font-weight: bold;
+    font-family: 'Cutive Mono', monospace;
+}
+
+header label {
+    font-size: 20px;
 }
 
 header > div > button {
@@ -32,9 +41,6 @@ header > div > button {
     border-color: #4C3E36;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Cutive Mono', monospace;
-    font-weight: bold;
-    color:#4C3E36;
 }
 
 header > div > button:hover {
@@ -47,15 +53,12 @@ header > div > input {
     background-color: #f4f3ef;
     border-color: #4C3E36;
     border-radius: 5px;
-    font-family: 'Cutive Mono', monospace;
-    font-weight: bold;
-    color:#4C3E36;
 }
 
 main > div {
     height: 80px;
-    width: 80px;
-    display: flex;
+    width: 110px;
+    display: flex; /* using flexbox to center content inside the boxes (div only child is text) */
     justify-content: center;
     align-items: center;
     border: 2px solid #4C3E36;
@@ -63,18 +66,40 @@ main > div {
     font-weight: bold;
     color: #4C3E36;
     box-sizing:border-box;
+    transition: transform 0.2s;
 }
-/* Different background colors for Fizz, Buzz and FizzBuzz */
-.fizzclass {
+main > div:hover {
+    transform: scale(1.05);
+}
+/* different background colors for Fizz, Buzz and FizzBuzz, and numbers */
+.fizz {
     background-color: #A5A78F;
 }
-.buzzclass {
+.buzz {
     background-color: #677C5F;
 }
-.fizzbuzzclass {
+.fizzbuzz {
     background-color: #EBDFE4;
 }
-.numberclass {
-    background-color: #F4F3EF;
+.number {
+    background-color: #e6beae;
 }
-/* Grid layout for main content */
+/* grid layout for main content - starting with mobile */
+#maingrid {
+    display: grid; /*using css grid -> turning main into a grid container*/
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); /* autofit instead of 1 column to not waste space, columns min 110px wide, max 1fr */
+    gap: 5px;
+    padding: 10px;
+}
+/* media for tablets */
+@media (min-width: 576px) {
+    #maingrid {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns for tablets */
+    }
+}
+/* media for desktops */
+@media (min-width: 992px) {
+    #maingrid {
+        grid-template-columns: repeat(10, 1fr); /* 10 columns for desktops */
+    }
+}
