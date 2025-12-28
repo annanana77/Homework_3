@@ -10,5 +10,24 @@ document.getElementById('generateBtn').addEventListener('click', function() { //
         divnbr.id = `myid${i}`; //gives div element unique id myid+number//
         divnbr.textContent = i; //adds number i as text to the div element//
         maingrid.appendChild(divnbr); //appends div element as child to main// 
-}
+
+    const buzzval = parseInt(document.getElementById('buzz').value);
+    const fizzval = parseInt(document.getElementById('fizz').value);
+    
+    //fizzbuzz logic applied to each div//
+    if (i % fizzval === 0 && i % buzzval === 0) {
+        divnbr.innerText = "FizzBuzz";
+        divnbr.classList.add("fizzbuzzclass");
+    } else if (i % fizzval === 0) {
+        divnbr.innerText = "Fizz";
+        divnbr.classList.add("fizzclass");
+    } else if (i % buzzval === 0) {
+        divnbr.innerText = "Buzz";
+        divnbr.classList.add("buzzclass");
+    } else{
+        divnbr.innerText = i;
+        divnbr.classList.add("numberclass");
+    }
+
+    }
 });
