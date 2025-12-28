@@ -2,3 +2,47 @@ body {
     font-family: 'Cutive Mono', monospace;
     background-color: #f4f3ef;
 }
+
+h1 {
+    text-align: center;
+    color: #4C3E36;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+
+header {
+    background-color: #BC8980;
+    padding: 20px;
+    margin-bottom: 30px;
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+header > div > label {
+    font-size: 20px;
+}
+
+header > div > button {
+    font-size: 20px;
+    padding: 5px 15px;
+    background-color: #f4f3ef;
+    border-color: #4C3E36;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cutive Mono', monospace;
+}
+
+header > div > button:hover {
+    background-color: #e0dcd5;
+}
+
+header > div > input {
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #f4f3ef;
+    border-color: #4C3E36;
+    border-radius: 5px;
+    font-family: 'Cutive Mono', monospace;
+}
