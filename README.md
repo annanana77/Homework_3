@@ -1,2 +1,2 @@
-# Homerwork_3
+# Homework_3
 FizzBuzz
