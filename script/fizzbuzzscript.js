@@ -39,7 +39,7 @@ document.getElementById('generateBtn').addEventListener('click', function() { //
     }
 });
 
-document.getElementById('clearBtn').addEventListener('click', function() { 
+document.getElementById('resetBtn').addEventListener('click', function() { 
     clearGrid(); //calls the clearGrid function to clear the grid//
 });
 
