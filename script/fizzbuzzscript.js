@@ -25,10 +25,11 @@ document.getElementById('generateBtn').addEventListener('click', function() { //
     for (let i = startvalue; i <= endvalue; i++) {
         const divnbr = document.createElement('div'); //creates div element in html with variable name divnbr//
         divnbr.id = `myid${i}`; //gives div element unique id myid+number//
-        divnbr.innerText = i; //adds number i as text to the div element//
         maingrid.appendChild(divnbr); //appends div element as child to main// 
-
+    }
     //fizzbuzz logic applied to each div//
+    for (let i = startvalue; i <= endvalue; i++) {
+        const divnbr = document.getElementById(`myid${i}`); //gets each div by its unique id//
     if (i % fizzval === 0 && i % buzzval === 0) {
         divnbr.innerText = "FizzBuzz";
         divnbr.classList.add("fizzbuzz");
