@@ -21,7 +21,7 @@ header .controls {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 header label, header button, header input {
@@ -34,7 +34,7 @@ header label {
     font-size: 20px;
 }
 
-header > div > button {
+header button {
     font-size: 20px;
     padding: 5px 15px;
     background-color: #f4f3ef;
@@ -43,11 +43,11 @@ header > div > button {
     cursor: pointer;
 }
 
-header > div > button:hover {
+header button:hover {
     background-color: #e0dcd5;
 }
 
-header > div > input {
+header input {
     font-size: 15px;
     padding: 5px 10px;
     background-color: #f4f3ef;
@@ -91,15 +91,11 @@ main > div:hover {
     gap: 5px;
     padding: 10px;
 }
-/* media for tablets */
-@media (min-width: 576px) {
-    #maingrid {
-        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); /* autofit instead of specific 5 for smoother transition but result is around 5 columns for tablets */
-    }
-}
+/* media for tablets 576px-> no changes in grid layout -> leaving autofit instead of hard coding 5 columns for smoother transition between media but result is around 5 columns for tablets*/
+
 /* media for desktops */
 @media (min-width: 992px) {
     #maingrid {
-        grid-template-columns: repeat(10, 1fr); /* 10 columns for desktops */
+        grid-template-columns: repeat(10, 1fr); /* 10 columns for desktops, 10 rows */
     }
 }
