@@ -8,7 +8,7 @@ h1 {
     text-align: center;
     color: #4C3E36;
     font-weight: bold;
-    font-size: 60px;
+    font-size: clamp(24px, 8vw, 60px); /* responsive font size between 24px and 60px depending on viewport width */
 }
 
 header {
@@ -94,7 +94,7 @@ main > div:hover {
 /* media for tablets */
 @media (min-width: 576px) {
     #maingrid {
-        grid-template-columns: repeat(5, 1fr); /* 5 columns for tablets */
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); /* autofit instead of specific 5 for smoother transition but result is around 5 columns for tablets */
     }
 }
 /* media for desktops */
